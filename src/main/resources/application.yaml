@@ -11,4 +11,48 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://
+    druid:
+      url: jdbc:mysql://localhost:3306/emos?useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: zhanhaodi
+      initial-size: 8
+      max-active: 16
+      min-idle: 8
+      max-wait: 60000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0 # 使用0号链接库
+    host: localhost
+    port: 6379
+    password: zhanhaodi
+    jedis:
+      pool:
+        max-active: 1000
+        max-wait: -1ms
+        max-idle: 16
+        min-idle: 8
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: emos
+      authentication-database: admin
+      username: admin
+      password: zhanhaodi
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.hardyz.emos.wx.db.pojo
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 日志输出sql语句
+    map-underscore-to-camel-case: true # 使得mybatis支持驼峰命名法
+logging:
+  level:
+    root: info
+    com.hardyz.emos.wx.db.dao : warn
+  pattern:
+    console: "%d{HH:mm:ss}  %-5level  %msg%n"
+
+

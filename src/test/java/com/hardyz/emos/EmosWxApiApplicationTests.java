@@ -1,4 +1,4 @@
-package com.hardyz.emoswxapi;
+package com.hardyz.emos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

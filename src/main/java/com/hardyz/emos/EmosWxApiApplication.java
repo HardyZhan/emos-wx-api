@@ -1,4 +1,4 @@
-package com.hardyz.emoswxapi;
+package com.hardyz.emos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
