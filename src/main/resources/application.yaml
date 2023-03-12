@@ -54,5 +54,14 @@ logging:
     com.hardyz.emos.wx.db.dao : warn
   pattern:
     console: "%d{HH:mm:ss}  %-5level  %msg%n"
+# jwt令牌校验信息配置
+emos:
+  jwt:
+    # 密钥
+    password: hardyz
+    # 过期时间 天
+    expire: 5
+    # 缓存过期时间 天
+    cache-expire: 10
 
 
