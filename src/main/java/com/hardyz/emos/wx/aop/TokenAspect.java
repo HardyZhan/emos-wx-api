@@ -1,6 +1,5 @@
 package com.hardyz.emos.wx.aop;
 
-import cn.hutool.core.util.StrUtil;
 import com.hardyz.emos.wx.common.util.R;
 import com.hardyz.emos.wx.config.shiro.ThreadLocalToken;
 import org.aspectj.lang.ProceedingJoinPoint;
