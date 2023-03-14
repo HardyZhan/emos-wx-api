@@ -21,7 +21,7 @@ public class JwtUtil {
     @Value("${emos.jwt.password}")
     private String password;
 
-    @Value("@{emos.jwt.expire}")
+    @Value("${emos.jwt.expire}")
     private int expire;
 
     public String createToken(int userId) {
